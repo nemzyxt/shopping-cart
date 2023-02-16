@@ -19,7 +19,7 @@ const products = [
 const getProductData = (id) => {
     let product = products.find(product => product.id === id)
 
-    if(product == undefined) {
+    if(product === undefined) {
         console.log("No product with ID ", id)
     }
 
