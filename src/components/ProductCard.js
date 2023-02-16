@@ -7,7 +7,7 @@ const ProductCard = (props) => {
   return (
     <Card>
         <Card.Body>
-            <Card.Title>{product.title}</Card.Title>
+            <Card.Title>{product.item}</Card.Title>
             <Card.Text>${product.price}</Card.Text>
             <Button variant='primary'>Add To Cart</Button>
         </Card.Body>
