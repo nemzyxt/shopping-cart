@@ -26,7 +26,18 @@ const NavBar = () => {
           <Modal.Title>Shopping Cart</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h1>This is the modal body</h1>
+          {productsCount > 0
+          ? <>
+              <h1>Items in Cart :</h1>
+              {cart.items.map((currentProduct, idx) => (
+                <h1>{currentProduct.item}</h1>
+              ))}
+              <h1>Total : {cart.getTotalCost().toFixed(2)}</h1>
+              <Button variant='success'>
+                Purchase items !
+              </Button>
+            </>
+          : <h1>There are no items added to cart</h1>}
         </Modal.Body>
       </Modal>
     </>
