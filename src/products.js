@@ -1,4 +1,4 @@
-const products = [
+const productsArray = [
     {
         id: "1",
         item: "Coffee",
@@ -17,7 +17,7 @@ const products = [
 ]
 
 const getProductData = (id) => {
-    let product = products.find(product => product.id === id)
+    let product = productsArray.find(product => product.id === id)
 
     if(product === undefined) {
         console.log("No product with ID ", id)
@@ -26,4 +26,4 @@ const getProductData = (id) => {
     return product
 }
 
-export { products, getProductData }
+export { productsArray, getProductData }
