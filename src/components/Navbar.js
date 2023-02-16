@@ -3,6 +3,8 @@ import { Navbar, Button, Modal, Container } from 'react-bootstrap'
 
 import { CartContext } from '../CartContext'
 
+import CartProduct from './CartProduct'
+
 const NavBar = () => {
   const [show, setShow] = useState(false)
   const handleShow = () => setShow(true)
@@ -30,7 +32,9 @@ const NavBar = () => {
           ? <>
               <h1>Items in Cart :</h1>
               {cart.items.map((currentProduct, idx) => (
-                <h1>{currentProduct.item}</h1>
+                <CartProduct 
+                  id={currentProduct.id} 
+                  quantity={currentProduct.quantity} />
               ))}
               <h1>Total : {cart.getTotalCost().toFixed(2)}</h1>
               <Button variant='success'>
